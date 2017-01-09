@@ -591,7 +591,8 @@ before inserting them into the database? Don't worry, see
 
     Supported algorithms for this method depend on your PHP version, but
     include the algorithms returned by the PHP function :phpfunction:`hash_algos`
-    as well as a few others (e.g. bcrypt). See the ``encoders`` key in the
+    as 
+    as a few others (e.g. bcrypt). See the ``encoders`` key in the
     :doc:`Security Reference Section </reference/configuration/security>`
     for examples.
 
@@ -1027,6 +1028,8 @@ if your User object has a ``getFirstName()`` method, you could use that::
     public function indexAction()
     {
         // ...
+        
+        $user = $this->getUser();
 
         return new Response('Well hi there '.$user->getFirstName());
     }
